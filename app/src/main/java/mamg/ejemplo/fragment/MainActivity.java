@@ -1,10 +1,11 @@
 package mamg.ejemplo.fragment;
 
 
-import android.app.Fragment;
+
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.view.View;
@@ -107,5 +108,7 @@ public class MainActivity extends AppCompatActivity
     public void mostrarFragment(Fragment fragment){
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction transaction = fragmentManager.beginTransaction();
+        transaction.replace(R.id.content,fragment);
+        transaction.commit();
     }
 }
