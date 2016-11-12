@@ -14,10 +14,15 @@ public class PrimerFragment extends Fragment{
     public PrimerFragment(){
 
     }
+         public static PrimerFragment getInstance(){
+             PrimerFragment fragment = new PrimerFragment();
+             return fragment;
 
+         }
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        return super.onCreateView(inflater, container, savedInstanceState);
+        View view = inflater.inflate(R.layout.primer_fragment_layout,container, false);
+        return view;
     }
 }
